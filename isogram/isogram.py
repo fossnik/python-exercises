@@ -1,7 +1,6 @@
 def is_isogram(string):
 	seen = set()
-	for x in string:
-		x = x.lower()
+	for x in string.lower():
 		if x in seen:
 			if x.isalpha():
 				return False
