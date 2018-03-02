@@ -1,2 +1,11 @@
 def is_isogram(string):
-    pass
+	seen = set()
+	for x in string:
+		x = x.lower()
+		if x in seen:
+			if x.isalpha():
+				return False
+		else:
+			seen.add(x)
+
+	return True
