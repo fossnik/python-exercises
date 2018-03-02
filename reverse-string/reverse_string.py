@@ -1,2 +1,5 @@
 def reverse(input=''):
-    pass
+	output = ""
+	for x in input:
+		output = x + "" + output
+	return output
