@@ -46,4 +46,11 @@ def encode(plain_text):
 	return output
 
 def decode(ciphered_text):
-	pass
+	output = ""
+	for c in ciphered_text:
+		if c.isalpha():
+			output += cipher[c.lower()]
+		elif c.isnumeric():
+			output += c
+
+	return output
