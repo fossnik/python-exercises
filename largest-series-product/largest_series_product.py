@@ -1,9 +1,9 @@
 def largest_product(series, size):
-	if not series:
-		raise Exception("ValueError")
+	if size < 0:
+		raise ValueError("negative")
 
-	if size > len(series):
-		raise Exception("ValueError")
+	if len(series) < size:
+		raise ValueError("length")
 
 	max = 0
 
