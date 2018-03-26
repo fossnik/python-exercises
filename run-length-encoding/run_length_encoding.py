@@ -15,4 +15,21 @@ def decode(string):
 	return remit
 
 def encode(string):
-	pass
+	remit = ""
+	x = 1
+	while x <= len(string):
+		count = 1
+		try:
+			while string[x] == string[x-1]:
+				count += 1
+				x += 1
+		except IndexError:
+			print("")
+
+		if count > 1:
+			remit += str(count) + string[x-1]
+		else:
+			remit += string[x-1]
+
+		x += 1
+	return remit
