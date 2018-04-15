@@ -16,3 +16,6 @@ class Robot(object):
 
 	def getname(self):
 		return self.name
+
+	def reset(self):
+		self.name = Robot().getname()
